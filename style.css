@@ -51,12 +51,12 @@
 	max-width: 600px;
 	padding: 1em 1em;
 	display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 	grid-template-areas:
-		"city time date"
-		"temp temp temp"
-		"condition condition condition"
-		"humidity-container humidity-container wind-container";
+		"city date"
+		"temp temp"
+		"condition condition"
+		"humidity-container wind-container";
 	color: white;
 	background: rgba(0, 0, 0, 0.3);
 	border: 3px solid rgba(255, 255, 255, 0.6);
@@ -69,13 +69,6 @@
 	justify-self: start;
 	font-size: 1.75rem;
 	grid-area: city;
-}
-
-.current-time {
-	align-self: start;
-	justify-self: center;
-	font-size: 1.75rem;
-	grid-area: time;
 }
 
 .current-date {
