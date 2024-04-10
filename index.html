@@ -1,34 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Weather App · nismoDev</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Weather App</title>
-	<link rel="stylesheet" href="style.css">
-</head>
+	<body>
+		<div class="background-container">
+			<div class="search-container">
+				<input class="search-query" name="search-query" />
+				<button class="search-button">
+					<img src="./icons/search.png" alt="" class="search-icon" />
+				</button>
+			</div>
 
-<body>
-	<div class="background-container">
+			<div class="current-weather-container">
+				<p class="current-city"></p>
+				<p class="current-time"></p>
+				<p class="current-date"></p>
+				<p class="current-temp"></p>
+				<p class="current-condition"></p>
+				<div class="current-humidity-container">
+					<img src="./icons/humidity.png" alt="" class="current-humidity-icon" />
+					<p class="current-humidity"></p>
+				</div>
+				<div class="current-wind-container">
+					<img src="./icons/wind.png" alt="" class="current-wind-icon" />
+					<p class="current-wind"></p>
+				</div>
+			</div>
 
-		<input class="query-location" name="query-location" id="query-location"></input>
+			<div class="weather-hourly-container"></div>
 
-		<button class="button-search-city">Search your city</button>
-
-		<div class="weather-container">
-			<p class="temp"></p>
-			<p class="condition"></p>
-			<p class="humidity"></p>
-			<p class="wind"></p>
+			<div class="forecast-container">
+				<p class="tomorrow-date"></p>
+				<p class="tomorrow-condition"></p>
+				<p class="tomorrow-min-temp"></p>
+				<p class="tomorrow-max-temp"></p>
+				<div class="separator"></div>
+				<p class="overmorrow-date"></p>
+				<p class="overmorrow-condition"></p>
+				<p class="overmorrow-min-temp"></p>
+				<p class="overmorrow-max-temp"></p>
+			</div>
 		</div>
 
-		<div class="date-time-location-container">
-			<p class="date-time-location"></p>
-		</div>
-
-	</div>
-
-	<script src="index.js"></script>
-</body>
-
+		<script src="index.js"></script>
+	</body>
 </html>
