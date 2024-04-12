@@ -195,19 +195,14 @@ function fetchForecastWeather(location) {
 				)}°C`;
 			}
 
-			const currentTime = document.querySelector(".current-time");
 			const currentDate = document.querySelector(".current-date");
 			const tomorrowDate = document.querySelector(".tomorrow-date");
 			const overmorrowDate = document.querySelector(".overmorrow-date");
 
 			function formatDate() {
-				let todayMinute = response.current.last_updated.substring(14, 16);
-				let todayHour = response.current.last_updated.substring(11, 13);
 				let todayDay = new Date().getDate();
 				let todayMonth = new Date().getMonth();
-				let todayTime = `${todayHour}:${todayMinute}`;
 				let todayDate = `${months[todayMonth]} ${todayDay}`;
-				currentTime.textContent = todayTime;
 				currentDate.textContent = todayDate;
 
 				let newTomorrowDate = new Date();
@@ -232,7 +227,9 @@ function fetchForecastWeather(location) {
 					".weather-hourly-container"
 				);
 				for (let i = 0; i < 24; i++) {
-					let todayHour = parseInt(response.current.last_updated.substring(11, 13));
+					let todayHour = parseInt(
+						response.current.last_updated.substring(11, 13)
+					);
 					console.log(todayHour);
 					let weatherHourlyDiv = document.createElement("div");
 					weatherHourlyDiv.classList.add("weather-hourly-div");
