@@ -47,7 +47,6 @@ function fetchForecastWeather(location) {
 			return response.json();
 		})
 		.then(function (response) {
-			console.log(response);
 			let weatherConditionCode = response.current.condition.code;
 
 			// SET BACKGROUND //
@@ -230,12 +229,10 @@ function fetchForecastWeather(location) {
 					let todayHour = parseInt(
 						response.current.last_updated.substring(11, 13)
 					);
-					console.log(todayHour);
 					let weatherHourlyDiv = document.createElement("div");
 					weatherHourlyDiv.classList.add("weather-hourly-div");
 					weatherHourlyContainer.appendChild(weatherHourlyDiv);
 					let hourData = (todayHour + i) % 24;
-					console.log(hourData);
 					let hourDataPara = document.createElement("p");
 					hourDataPara.classList.add("hour-data-para");
 					if (i == 0) {
