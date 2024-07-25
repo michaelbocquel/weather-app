@@ -7,10 +7,8 @@
 .background-container {
 	display: grid;
 	justify-items: center;
-	gap: 2em;
-	min-height: 100vh;
+	gap: 3em;
 }
-
 /* ::-webkit-scrollbar {
 	height: 18px;
 }
@@ -44,7 +42,7 @@
 	border-radius: 12px;
 	outline: none;
 	text-align: left;
-	font-size: 1.5rem;
+	font-size: 1.5em;
 	color: white;
 }
 
@@ -246,4 +244,10 @@
 	height: 1px;
 	border: 1px solid rgba(255, 255, 255, 0.6);
 	margin: 10px 0;
+}
+
+@media only screen and (min-width: 601px) {
+ .background-container {
+	gap: 8em;
+ }	
 }
